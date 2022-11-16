@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="348.237">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="29.717">
+        <system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "Hazem" and last name "Mourad"....................passed
+And user enter date of birth................................................passed
+And user enter email "HazemMourad@example.com" field........................passed
+And user fills Password fields "P@ssw0rd" "Password"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users login to his account" name="the user login to his account" time="20.007">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "HazemMourad@example.com" and "P@ssw0rd".......passed
+And user press on login button..............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users login to his account" name="the user  can't login to his account" time="20.422">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#Email&quot;}&#10;  (Session info: chrome=107.0.5304.107)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-55Q6G7F', ip: '172.28.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [27c50fe25603c821ad11e30f6fa60945, findElement {using=id, value=Email}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Hazem\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53279}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53279/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 27c50fe25603c821ad11e30f6fa60945" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user login with "invalid" "wrong@example.com" and "P@ssw0rd"...........failed
+Then user could not login to the system.....................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#Email"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-55Q6G7F', ip: '172.28.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [27c50fe25603c821ad11e30f6fa60945, findElement {using=id, value=Email}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Hazem\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53279}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53279/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 27c50fe25603c821ad11e30f6fa60945
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at jdk.proxy2/jdk.proxy2.$Proxy30.sendKeys(Unknown Source)
+	at org.example.StepDefinitions.St_02_LoginPageDef.invaildData(St_02_LoginPageDef.java:40)
+	at ✽.user login with "invalid" "wrong@example.com" and "P@ssw0rd"(file:///E:/FWD_ECommerce/NopCommerceFWD_HazemMourad_OctoberCoh/src/main/resources/features/F02_Login.feature:8)
+]]></failure>
+    </testcase>
+    <testcase classname="F03_Currencies | users could change currency and select between two currencies" name="user could change currency" time="15.81">
+        <system-out><![CDATA[Given user select euro currency.............................................passed
+Then categories will be changed to the currency symbol......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F4_Search feature" name="user could search using product name" time="14.673">
+        <system-out><![CDATA[Given user click on search box..............................................passed
+When user enter product "book"..............................................passed
+Then results should have the same "book"....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F4_Search feature" name="user could search using product name 2" time="13.525">
+        <system-out><![CDATA[Given user click on search box..............................................passed
+When user enter product "laptop"............................................passed
+Then results should have the same "laptop"..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F4_Search feature" name="user could search using product name 3" time="14.577">
+        <system-out><![CDATA[Given user click on search box..............................................passed
+When user enter product "nike"..............................................passed
+Then results should have the same "nike"....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F4_Search feature" name="user could search using sku" time="20.134">
+        <system-out><![CDATA[Given user click on search box..............................................passed
+When user enter product "SCI_FAITH".........................................passed
+And user click on the product...............................................passed
+Then result should have the same "SCI_FAITH"................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F4_Search feature" name="user could search using sku 2" time="16.167">
+        <system-out><![CDATA[Given user click on search box..............................................passed
+When user enter product "APPLE_CAM".........................................passed
+And user click on the product...............................................passed
+Then result should have the same "APPLE_CAM"................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F4_Search feature" name="user could search using sku 3" time="25.953">
+        <system-out><![CDATA[Given user click on search box..............................................passed
+When user enter product "SF_PRO_11".........................................passed
+And user click on the product...............................................passed
+Then result should have the same "SF_PRO_11"................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F5_hover on category and select a subcategory" name="user should hover on a random category and select one of subcategories" time="20.17">
+        <system-out><![CDATA[Given user hover on category................................................passed
+When user select a subcategory..............................................passed
+Then page title should contain the name of the subcategory..................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F6_home page sliders" name="first slider redirect to the required url" time="15.864">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user select first slider..............................................passed
+When user click on the image................................................passed
+Then url should be referring to product url "https://demo.nopcommerce.com/nokia-lumia-1020".failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at org.example.StepDefinitions.St_06_HomeSlidersDef.assert_url(St_06_HomeSlidersDef.java:21)
+	at ✽.url should be referring to product url "https://demo.nopcommerce.com/nokia-lumia-1020"(file:///E:/FWD_ECommerce/NopCommerceFWD_HazemMourad_OctoberCoh/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="F6_home page sliders" name="second slider redirect to the required url" time="13.226">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given user select second slider.............................................passed
+When user click on the image................................................passed
+Then url should be referring to product url "https://demo.nopcommerce.com/iphone-6".failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at org.example.StepDefinitions.St_06_HomeSlidersDef.assert_url(St_06_HomeSlidersDef.java:21)
+	at ✽.url should be referring to product url "https://demo.nopcommerce.com/iphone-6"(file:///E:/FWD_ECommerce/NopCommerceFWD_HazemMourad_OctoberCoh/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="19.856">
+        <system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" is opened in new tab............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="17.326">
+        <system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" is opened in new tab.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="13.845">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[When user opens rss link....................................................passed
+Then "nopCommerce demo store. New online store" is opened in the same tab...failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.failNotEquals(Assert.java:969)
+	at org.testng.Assert.assertTrue(Assert.java:43)
+	at org.testng.Assert.assertTrue(Assert.java:53)
+	at org.example.StepDefinitions.St_07_FollowUsStepDef.checkRSS_URL(St_07_FollowUsStepDef.java:46)
+	at ✽."nopCommerce demo store. New online store" is opened in the same tab(file:///E:/FWD_ECommerce/NopCommerceFWD_HazemMourad_OctoberCoh/src/main/resources/features/F07_followUs.feature:14)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="20.972">
+        <system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" is opened in new tab........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F8_wishlist feature" name="adding wil cause success message to appear" time="13.029">
+        <system-out><![CDATA[When user click on add button...............................................passed
+Then success message will appear in a green background......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F8_wishlist feature" name="adding will cause number of items to be more than zero" time="21.806">
+        <system-out><![CDATA[When user click on add button...............................................passed
+When user click on wishlist.................................................passed
+Then user finds number of items is more than zero...........................passed
+]]></system-out>
+    </testcase>
+</testsuite>
